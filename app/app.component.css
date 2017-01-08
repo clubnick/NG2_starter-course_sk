@@ -1,0 +1,11 @@
+.users-list li   {
+  cursor: pointer;
+}
+.jumbotron .glyphicon {
+  font-size: 60px;
+}
+
+.gocrazy {
+  background: blue;
+  color: #FFF;
+}
