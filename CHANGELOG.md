@@ -9,7 +9,8 @@ Upgraders: for a fresh start, consider running these commands
 * https://github.com/scotch-io/angular2-starter-course
 
 <a name="TO DO"></a>
-#  continue with chapter 23/26
+# @TODO
+# continue with chapter 23/26
 * https://school.scotch.io/getting-started-with-angular-2/form-validation?autoplay=true
 
 <a name="2.0.0"></a>
