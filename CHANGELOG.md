@@ -24,5 +24,5 @@ Upgraders: for a fresh start, consider running these commands
 
 <a name="1.0.0"></a>
 # 1.0.0 (2017-01-06)
-* https://github.com/scotch-io/angular2-starter-coursec
+* https://github.com/scotch-io/angular2-starter-course
 
