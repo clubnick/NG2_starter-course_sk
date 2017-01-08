@@ -26,13 +26,13 @@
         </ul>
       </div>
 
-      <!-- onClick event -->
+      <!-- This is OUTPUT EXAMPLE,  user-form component send (emit) some event -->
       <user-form (userCreated)="onUserCreated($event)"></user-form>
 
     </div>
     <div class="col-sm-8">
 
-      <!-- This is Injection activeUser into user-profile component property [user]-->
+      <!-- This is INPUT EXAMPLE, Injection activeUser into user-profile component property [user]-->
       <user-profile [user]="activeUser"></user-profile>
 
       <div class="jumbotron gocrazy" *ngIf="!activeUser">
