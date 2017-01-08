@@ -6,7 +6,7 @@ Upgraders: for a fresh start, consider running these commands
 <a name="Based on"></a>
 # Based on:
 * https://school.scotch.io/getting-started-with-angular-2
-* https://github.com/scotch-io/angular2-starter-coursec
+* https://github.com/scotch-io/angular2-starter-course
 
 <a name="TO DO"></a>
 #  continue with chapter 23/26
