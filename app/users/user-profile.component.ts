@@ -1,13 +1,14 @@
+// this is input component
 import { Component, Input } from '@angular/core';
 import { User } from '../shared/models/user';
 
 @Component({
   selector: 'user-profile',
-  // ther is used user class instance here, it have to be used @input in export
+  // there is used user class instance here, it have to be used @input by export
   template: `
     <div class="jumbotron" *ngIf="user">
       <div>
-        user-profile.component
+        user-profile.component (AS INPUT)
       </div>
       <h2>{{ user.name }} <small>{{ user.username }}</small></h2>
 

@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// this is input component
 var core_1 = require("@angular/core");
 var user_1 = require("../shared/models/user");
 var UserProfileComponent = (function () {
@@ -22,10 +23,9 @@ __decorate([
 UserProfileComponent = __decorate([
     core_1.Component({
         selector: 'user-profile',
-        // ther is used user class instance here, it have to be used @input in export
-        template: "\n    <div class=\"jumbotron\" *ngIf=\"user\">\n      <div>\n        user-profile.component\n      </div>\n      <h2>{{ user.name }} <small>{{ user.username }}</small></h2>\n\n      <span>Name:</span> <input class=\"form-control\" [(ngModel)]=\"user.name\">\n      <span>Username:</span> <input class=\"form-control\" [(ngModel)]=\"user.username\">\n    </div>\n  "
-    }),
-    __metadata("design:paramtypes", [])
+        // there is used user class instance here, it have to be used @input by export
+        template: "\n    <div class=\"jumbotron\" *ngIf=\"user\">\n      <div>\n        user-profile.component (AS INPUT)\n      </div>\n      <h2>{{ user.name }} <small>{{ user.username }}</small></h2>\n\n      <span>Name:</span> <input class=\"form-control\" [(ngModel)]=\"user.name\">\n      <span>Username:</span> <input class=\"form-control\" [(ngModel)]=\"user.username\">\n    </div>\n  "
+    })
 ], UserProfileComponent);
 exports.UserProfileComponent = UserProfileComponent;
 //# sourceMappingURL=user-profile.component.js.map

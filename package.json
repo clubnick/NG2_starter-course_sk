@@ -1,7 +1,7 @@
 {
   "name": "angular2-starter-course",
-  "version": "1.0.0",
-  "description": "angular2-starter-course",
+  "version": "2.1.0",
+  "description": "angular2-starter-course_sk, modified by StanLi",
   "main": "index.js",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",

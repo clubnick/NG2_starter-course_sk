@@ -10,7 +10,6 @@ export class AppComponent {
   message: string = 'Hello!'; 
   users: User[] = [
     { id: 25, name: 'Chris', username: 'sevilayha' },
-    { id: 26, name: 'Nick', username: 'whatnicktweets' },
     { id: 27, name: 'Holly', username: 'hollylawly' },
     { id: 28, name: 'Stan', username: 'stanli' },
   ];
@@ -22,6 +21,8 @@ export class AppComponent {
   }
 
   onUserCreated(event) {
+    console.log('event:');
+    console.log(event);
     this.users.push(event.user);
   }
 }

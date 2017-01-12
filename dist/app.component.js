@@ -5,16 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.message = 'Hello!';
         this.users = [
             { id: 25, name: 'Chris', username: 'sevilayha' },
-            { id: 26, name: 'Nick', username: 'whatnicktweets' },
             { id: 27, name: 'Holly', username: 'hollylawly' },
             { id: 28, name: 'Stan', username: 'stanli' },
         ];
@@ -24,6 +20,8 @@ var AppComponent = (function () {
         console.log(this.activeUser);
     };
     AppComponent.prototype.onUserCreated = function (event) {
+        console.log('event:');
+        console.log(event);
         this.users.push(event.user);
     };
     return AppComponent;
@@ -33,8 +31,7 @@ AppComponent = __decorate([
         selector: 'my-app',
         templateUrl: './app/app.component.html',
         styleUrls: ['./app/app.component.css']
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

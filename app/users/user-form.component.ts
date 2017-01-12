@@ -1,3 +1,4 @@
+// this is output component
 import { Component, Output, EventEmitter } from '@angular/core';
 import { User } from '../shared/models/user';
 
@@ -17,16 +18,20 @@ import { User } from '../shared/models/user';
   template: `
     <form #form="ngForm" (ngSubmit)="onSubmit()" *ngIf="active">
       <div>
-         user-form.component, form (#form) {{form.valid}}
+         user-form.component, form (#form) {{form.valid}} (AS OUTPUT)
       </div>
 
       <div class="form-group" [ngClass]="{ 'has-error': name.invalid && name.touched }">
         <input type="text" class="form-control" name="name" placeholder="Name" required
           [(ngModel)]="newUser.name" #name="ngModel">
 
+      <!--
+      [ngClass]="{ 'has-error': name.invalid && name.touched } ... assign ngClass with RED BORDER if...
+      -->
+
       <!-- 
        [(ngModel)]="newUser.name" // banana box into ng model 
-       #name="ngModel">           // direct template reference 
+       #name="ngModel">           // direct template reference in DOM
       -->
 
         <span class="help-block" *ngIf="name.invalid && name.touched">Some Name is required.</span>
@@ -52,12 +57,19 @@ import { User } from '../shared/models/user';
 export class UserFormComponent {
   @Output() userCreated = new EventEmitter();
   newUser: User = new User();
-  active: boolean = true;
+  active: boolean = true; // flag if user is active ... <form ...*ngIf="active">
 
   onSubmit() {
-    // show the event that the user was created
-    this.userCreated.emit({ user: this.newUser });
+    // show the info about user was created
+    console.log("OnSubmit() - for Create User was called...");
+    console.log(this.newUser);
+    console.log('Name: ' + this.newUser.name);
+    console.log('Username: ' + this.newUser.username);
 
+    // EventEmitter - sent something to parent component - app.component
+    this.userCreated.emit({ user: this.newUser });
+ 
+    // this line clear input fields
     this.newUser = new User();
     this.active = false;
     setTimeout(() => this.active = true, 0);
