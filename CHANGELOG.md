@@ -10,7 +10,7 @@ Upgraders: for a fresh start, consider running these commands
 
 <a name="TO DO"></a>
 # @TODO
-* add some karma tests
+* add some jasmine + protractor (or karma) tests
 * ONE for UI - User Interface
 * ONE for E2E - End to End (Integration between components)
 
